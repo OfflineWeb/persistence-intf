@@ -43,8 +43,8 @@ public interface PersistenceManager {
 
     <T> void saveOrUpdate(List<T> entities) throws PersistenceException;
 
-    <T> List<T> execute(Class<T> clazz, QueryIntf query) throws PersistenceException;
+    <T, M> List<T> execute(Class<T> clazz, QueryIntf<M> query) throws PersistenceException;
 
-    void execute(QueryIntf query) throws PersistenceException;
+    <M> void execute(QueryIntf<M> query) throws PersistenceException;
 
 }

@@ -28,5 +28,6 @@ package offlineweb.common.persistence.intf;
  * @author papa
  * Created on 7/4/17.
  */
-public interface QueryIntf {
+public interface QueryIntf<T> {
+    T getQuery();
 }
